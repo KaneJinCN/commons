@@ -25,7 +25,7 @@ public class StringMaskUtils {
      * 按指定的位置和长度遮蔽敏感字符串
      *
      * 例如：
-     * maskString("18601270604", 3, 4)的返回值为"186****0604"
+     * maskString("13901270809", 3, 4)的返回值为"139****0809"
      *
      * @param str 字符串
      * @param start 开始位置坐标
