@@ -31,6 +31,20 @@ public class DateUtils {
     }
 
     /**
+     * 格式化日期
+     *
+     * @param time the milliseconds since January 1, 1970, 00:00:00 GMT.
+     * @param pattern 格式
+     * @return 格式化后的日期字符串
+     */
+    public static String formatDate(Long time, String pattern) {
+        if (time == null)
+            return "";
+
+        return new SimpleDateFormat(pattern).format(new Date(time));
+    }
+
+    /**
      * 解析日期字符串
      *
      * @param dateString 日期字符串
