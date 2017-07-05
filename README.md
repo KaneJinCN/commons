@@ -1,8 +1,8 @@
 # commons
 一些公用的功能
 
-## commons-util
-使用方法
+### commons-util
+使用方法：
 ```xml
 <dependency>
     <groupId>cn.kanejin.commons</groupId>

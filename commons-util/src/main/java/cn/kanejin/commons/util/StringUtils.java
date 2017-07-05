@@ -82,8 +82,6 @@ public class StringUtils {
         return sb.toString();
     }
 
-    private static final char[] NUMBER_CHARS = "0123456789".toCharArray();
-
     /**
      * 生成一个指定长度的随机字符串（a-zA-Z0-9）
      *
@@ -101,17 +99,18 @@ public class StringUtils {
         StringBuilder sb = new StringBuilder();
 
         for (;;) {
-            char c = NUMBER_CHARS[RANDOM.nextInt(10)];
+            int i = RANDOM.nextInt(10);
 
-            if (c != '0') {
-                sb.append(c);
+            if (i > 0) {
+                sb.append(i);
                 break;
             }
         }
 
         for (int i = 1; i < length; i++) {
-            sb.append(NUMBER_CHARS[RANDOM.nextInt(10)]);
+            sb.append(RANDOM.nextInt(10));
         }
+
         return sb.toString();
     }
 
