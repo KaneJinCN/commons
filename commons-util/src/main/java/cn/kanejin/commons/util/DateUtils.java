@@ -33,7 +33,7 @@ public class DateUtils {
     /**
      * 格式化日期
      *
-     * @param time the milliseconds since January 1, 1970, 00:00:00 GMT.
+     * @param time 毫秒数(ms) since 1970/01/01 00:00:00 GMT.
      * @param pattern 格式
      * @return 格式化后的日期字符串
      */
@@ -41,7 +41,7 @@ public class DateUtils {
         if (time == null)
             return "";
 
-        return new SimpleDateFormat(pattern).format(new Date(time));
+        return formatDate(new Date(time), pattern);
     }
 
     /**
